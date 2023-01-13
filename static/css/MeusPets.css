@@ -1,0 +1,75 @@
+.width80{
+    width: 80vw; 
+ }
+ 
+.tabela{
+     width: 100%;
+     margin-top: 20px;
+ }
+ 
+.tabela-linha{
+     background-color: #e8e7e7;
+ }
+
+.bg-side{
+    background-color: #391D34;
+    color: white;
+    height: 100vh;
+    width: 30vh;
+    
+}
+
+#titulo {
+    text-align: center;
+    font-size: 40px;
+
+}
+
+#home {
+    text-align: center;
+    padding: 20px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+}
+
+#adotar {
+    text-align: center;
+    padding: 20px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    border-radius: 500px;
+    font-size: 15px;
+    
+}
+#divulgar {
+    text-align: center;
+    padding: 20px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    
+    
+}
+
+#sair {
+
+    text-align: center;
+    padding: 20px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+
+}
+
+#meus_pets {
+
+    font-size: 15px;
+    text-align: center;
+    padding: 20px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    background-color: #572c4f;
+    border-radius: 40px;
+
+}
+

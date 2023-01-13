@@ -1,0 +1,58 @@
+.bg-side-plataforma{
+    background-color: #391D34;
+    color: white;
+    height: 100vh;
+    width: 30vh;
+    margin: 0%;
+    
+    
+}
+
+#titulo {
+    text-align: center;
+    font-size: 15px;
+}
+
+#home {
+    text-align: center;
+    padding: 20px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+ 
+}
+
+#adotar {
+    text-align: center;
+    padding: 20px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+#divulgar {
+    text-align: center;
+    padding: 20px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+#meus_pets {
+
+    text-align: center;
+    padding: 20px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    border-radius: 40px;
+
+}
+
+#bem_vindo {
+    position: relative;
+    left: 20%;
+    top: 100px;
+}
+
+body {
+     overflow: hidden;
+}
+
+
+

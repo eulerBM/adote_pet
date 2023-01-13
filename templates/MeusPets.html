@@ -1,0 +1,134 @@
+{% load static %}
+<!doctype html>
+<html lang="pt-BR">
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cadastro</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{% static 'css/MeusPets.css' %}" rel="stylesheet">
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/9340/9340438.png" type="image/x-icon">
+
+    </head>
+    <body>
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-2 bg-side sidebar" id="titulo">
+                    <h2>ADO.TE</h2>
+                    <hr>
+
+
+                    <div class='header'id="home">
+                        <a href='/home/'  id="home" ><span>Home</span></a>
+                    </div>
+    
+                    <div class='header' id="adotar">
+                        <a href="/adotar/" id="adotar" ><span>Adotar</span></a>
+                    </div>
+    
+                    <div class='header' id="divulgar">
+                        <a href="/divulgar/" id="divulgar" ><span>Divulgar</span></a>
+                    </div>
+
+                    <div class='header' id="meus_pets">
+                        <a  id="meus_pets" ><span>Meus Pets</span></a>
+                    </div>
+    
+                    <div  class='header' id="sair">
+                        <a href="/leave/" ><span><button type="button" class="btn btn-danger">SAIR </button></span></a>
+                    </div>
+                    
+                    
+                </div>
+
+                <div class="col-md">
+                    <div class="wrapper">
+                        <div class="box width80">
+                            {% if messages %}
+                                <br>
+                                {% for message in messages %}
+                                    <div class="alert {{message.tags}}">
+                                        {{message}}
+                                    </div>
+                                {% endfor %}
+                            {% endif %}
+
+                             <table class="tabela" cellpadding="20">
+                                <tr>
+                                    <th>Foto</th>
+                                    <th>Nome</th>
+                                    <th>Raça</th>
+                                    <th>Status</th>
+                                    <th>Remover</th>
+                                </tr>       
+
+                                {% for pet in pets%}
+                                <tr class="tabela-linha">
+                                    <td width="20%">
+                                        <img width="40%" src="/media/{{pet.foto.url}}">
+                                        
+                                    </td>
+                                    <td>
+                                        {{pet.nome}}
+                                    </td>
+                                    <td>
+                                        {{pet.raca}}
+                                        
+                                    </td>
+                                    <td>
+                                        {% if pet.status == "P" %}
+                                            <span class="badge text-bg-primary">Para adoção</span>
+                                        {% elif pet.status == "A" %}
+                                            <span class="badge text-bg-success">Adotado</span>
+                                        {% endif%}
+                            
+                                       
+                                        
+                                    </td>
+                                    <td>
+                                        <form action="" method="post">
+
+                                            <a class="btn btn-danger" href="{% url 'excluir_pet' pet.id %}"
+                                            onclick="return confirm('Deseja excluir esse pet ?')">Excluir</a>
+
+                                        </form>
+                                        
+                                    </td>
+                                </tr>
+                            {% endfor %}
+
+                                    
+
+
+
+
+                               
+
+
+
+
+
+
+                                            
+                                        </td>
+                                    </tr>
+                                
+                            
+                                
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>
